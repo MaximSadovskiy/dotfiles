@@ -1,0 +1,21 @@
+[manager]
+show_hidden = true
+show_symlink = true
+ratio = [1, 3, 3]
+sort_dir_first = true
+
+[opener]
+edit = [
+	{ run = 'code "%*"', orphan = true, for = "windows" },
+	{ run = 'sudo micro "$@"', block = true, for = "unix" },
+]
+play = [
+	{ run = 'vlc "$@"', orphan = true, for = "unix" },
+	{ run = 'vlc "%1"', orphan = true, for = "windows" },
+]
+
+[tasks]
+micro_workers = 12
+macro_workers = 12
+bizarre_retry = 5
+image_alloc = 0

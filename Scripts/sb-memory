@@ -1,0 +1,10 @@
+#!/bin/sh
+# Description: Script to get ram usage
+
+source sb-status2d
+
+ram_info=$(free -mh --si | grep '^Mem:' | tr -s ' ')
+ram_used=$(echo $ram_info | awk '{print $3}')
+ram_total=$(echo $ram_info | awk '{print $2}')
+
+printf "%s 💾 MEM: %s/%s%s" "$s2d_color3" "$ram_used" "$ram_total" "$s2d_reset"

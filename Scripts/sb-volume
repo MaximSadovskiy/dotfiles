@@ -1,0 +1,19 @@
+#!/bin/sh
+# Description: Script to get current volume
+
+source sb-status2d
+
+info="$(pamixer --get-volume)"
+
+if [ "$info" -le 1 ]; then
+    icon_volume="🔇"
+elif [ "$info" -le 15 ]; then
+    icon_volume="🔈"
+elif [ "$info" -le 55 ]; then
+    icon_volume="🔉"
+else
+    icon_volume="🔊"
+fi
+
+printf "%s%s %s %s" "$s2d_color4" "$icon_volume" "$info%" "$s2d_reset"
+

@@ -1,0 +1,15 @@
+#!/bin/bash
+
+source sb-status2d
+
+# Find the line containing "ethernet"
+if result=$(nmcli device status | grep "ethernet"); then
+	ethernet_name="${result%% *}"
+    if [[ $result == *" connected"* ]]; then
+        printf "🌐 %sNet: %s%s" "$s2d_color2" "$ethernet_name" "$s2d_reset"
+    else
+        printf "🚫 %sNet: %s%s" "$s2d_color1" "$ethernet_name" "$s2d_reset"
+    fi
+else
+    printf "🚫 %sNo connection%s" "$s2d_color1" "$s2d_reset"
+fi

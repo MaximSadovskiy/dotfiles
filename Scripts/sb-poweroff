@@ -1,0 +1,12 @@
+#!/bin/sh
+
+# Power menu script using tofi
+
+CHOSEN=$(printf "❌ Exit\n🔄 Reboot\n⏻ Shutdown" | rofi -dmenu)
+
+case "$CHOSEN" in
+	"❌ Exit") exit 0 ;;
+	"🔄 Reboot") sudo reboot ;;
+	"⏻ Shutdown") sudo shutdown now ;;
+	*) exit 1 ;;
+esac

@@ -1,0 +1,21 @@
+#!/bin/sh
+# Description: Script to get current date and time
+
+source sb-status2d
+
+case "$(date '+%I')" in
+    "01") icon_clock="🕐" ;;
+    "02") icon_clock="🕑" ;;
+    "03") icon_clock="🕒" ;;
+    "04") icon_clock="🕓" ;;
+    "05") icon_clock="🕔" ;;
+    "06") icon_clock="🕕" ;;
+    "07") icon_clock="🕖" ;;
+    "08") icon_clock="🕗" ;;
+    "09") icon_clock="🕘" ;;
+    "10") icon_clock="🕙" ;;
+    "11") icon_clock="🕚" ;;
+    "12") icon_clock="🕛" ;;
+esac
+
+printf "%s%s %s%s" "$s2d_color5" "$icon_clock" "$(LC_ALL="ru_RU.UTF-8" date '+%A, %H:%M')" "$s2d_reset"

@@ -1,0 +1,15 @@
+reflector --completion-percent 100 -p https -f 12 -c Russia,Romania,Ukraine,Uzbekistan,Kazakhstan,Serbia,Czechia,Bulgaria
+
+Server = https://mirror.dkm.cz/archlinux/$repo/os/$arch
+Server = https://gluttony.sin.cvut.cz/arch/$repo/os/$arch
+Server = https://mirror.ps.kz/archlinux/$repo/os/$arch
+Server = https://mirror.mirohost.net/archlinux/$repo/os/$arch
+Server = https://europe.mirror.pkgbuild.com/$repo/os/$arch
+Server = https://mirrors.hostico.ro/archlinux/$repo/os/$arch
+Server = https://mirrors.neterra.net/archlinux/$repo/os/$arch
+Server = https://mirrors.nic.cz/archlinux/$repo/os/$arch
+Server = https://mirrors.nix.org.ua/linux/archlinux/$repo/os/$arch
+Server = https://mirror.telepoint.bg/archlinux/$repo/os/$arch
+Server = https://mirrors.uni-plovdiv.net/archlinux/$repo/os/$arch
+Server = https://mirrors.pidginhost.com/arch/$repo/os/$arch
+
